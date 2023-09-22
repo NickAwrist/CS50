@@ -6,4 +6,15 @@
 
 {% block body%}
     <h1>Encyclopedia page for {{entryName}}</h1>
+    
+    <div id="markdown-content">
+        {{ markdown_content|safe }}
+    </div>
+
+{% endblock %}
+
+{% block nav %}
+    <div>
+        <a href="{% url 'edit_entry' entry=entryName %}">Edit this entry</a>
+    </div>
 {% endblock %}

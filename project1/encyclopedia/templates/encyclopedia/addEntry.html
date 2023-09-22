@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Entry
+{% endblock %}
+
+{% block body %}
+    <h1>Create a new Encyclopedia Entry</h1>
+    
+    {% if entry_exists %}
+    <div id="entry_exists_alert" class="alert alert-danger">
+        An entry with the same name already exists.
+    </div>
+    {% endif %}
+    
+    <form class="entry-form" method="POST" action="{% url 'add_entry_submit' %}">
+        {% csrf_token %}
+        <label>Enter the name of the new entry:</label>
+        <input type="text" name="entryName" value = {{ entryName|default:'' }}><br><br>
+
+        <label>Enter the contents of the entry</label><br>
+        <div id="markdown-content">
+            <textarea name="markdown_text">{{ markdown_text|default:'' }}</textarea>
+        </div>
+        
+        <button type="submit">Save entry</button>
+    </form>
+{% endblock %}

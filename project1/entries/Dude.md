@@ -1,0 +1,3 @@
+<p>OMG NEW ENTRY HYPE</p>
+
+<p>OMG EDITED NEW PAGE HYPE</p>

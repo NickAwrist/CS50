@@ -13,8 +13,8 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
-    width: 80%;
+    height: 100%;
+    width: 100%;
 }
 
 .main {
@@ -35,4 +35,24 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+.entry-form{
+    height: 70%;
+    width: 80%;
+}
+
+#markdown-content{
+    height: 70%;
+    width: 80%;
+    border: black solid 1px;   
+}
+
+#entry_exists_alert{
+    width: 50% !important;
+}
+
+#pageNotFound{
+    color: red;
+
 }

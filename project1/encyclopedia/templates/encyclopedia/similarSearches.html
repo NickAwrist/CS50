@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Error: Page not found
+{% endblock %}
+
+{% block body%}
+
+    <h1 id="pageNotFound">Error, entry not found!</h1>
+
+    <h1>Here are entries that are similar to your search "{{ result }}".</h1>
+
+    <ul>
+        {% for entry in entries %}
+            <li>
+                <a href={% url 'entry' entry=entry %}>{{ entry }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
